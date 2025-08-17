@@ -4,15 +4,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { JWTDecoderApp } from "@/pages/Index";
 import NotFound from "@/pages/NotFound";
 import { ThemeProvider } from "@/lib/theme-provider.tsx";
-import { injectSpeedInsights } from '@vercel/speed-insights';
-import { inject } from '@vercel/analytics';
-
-injectSpeedInsights();
-inject();
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => (
     <TooltipProvider>
       <Sonner richColors closeButton />
+      <SpeedInsights />
+      <Analytics />
       <ThemeProvider defaultTheme="system">
         <BrowserRouter>
           <Routes>
