@@ -2,8 +2,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { JWTDecoderApp } from "@/pages/Index";
-import NotFound from "./pages/NotFound";
-import {ThemeProvider} from "@/lib/theme-provider.tsx";
+import NotFound from "@/pages/NotFound";
+import { ThemeProvider } from "@/lib/theme-provider.tsx";
+import { injectSpeedInsights } from '@vercel/speed-insights';
+import { inject } from '@vercel/analytics';
+
+injectSpeedInsights();
+inject();
 
 const App = () => (
     <TooltipProvider>
