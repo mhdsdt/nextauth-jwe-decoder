@@ -1,75 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>NextAuth JWE Decoder</title>
-    <link
-      rel="canonical"
-      href="https://nextauth-jwe-decoder.vercel.app/"
-    />
-    <meta
-      name="description"
-      content="Decode NextAuth v4 JWE session tokens entirely in your browser. Private, offline-capable, and fast."
-    />
-    <meta name="theme-color" content="#111827" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>NextAuth JWE Decoder — Decode NextAuth v4 Session Tokens (Offline, Private)</title>
+    <link rel="canonical" href="https://nextauth-jwe-decoder.vercel.app/"/>
+    <meta name="description" content="Decode NextAuth v4 JWE session tokens entirely in your browser. Private, offline-capable, and fast."/>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <meta name="application-name" content="NextAuth JWE Decoder"/>
+    <meta name="author" content="Mahdi Saadatbakht"/>
 
-    <meta property="og:title" content="NextAuth JWE Decoder" />
-    <meta
-      property="og:description"
-      content="Decode NextAuth v4 JWE session tokens entirely in your browser. Private, offline-capable, and fast."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://nextauth-jwe-decoder.vercel.app/"
-    />
-    <meta
-      property="og:image"
-      content="https://nextauth-jwe-decoder.vercel.app/og.png"
-    />
+    <!-- Palette-aligned theme colors -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)"/>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="NextAuth JWE Decoder" />
-    <meta
-      name="twitter:description"
-      content="Decode NextAuth v4 JWE session tokens entirely in your browser."
-    />
-    <meta
-      name="twitter:image"
-      content="https://nextauth-jwe-decoder.vercel.app/og.png"
-    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="NextAuth JWE Decoder"/>
+    <meta property="og:description" content="Decode NextAuth v4 JWE session tokens entirely in your browser. Private, offline-capable, and fast."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://nextauth-jwe-decoder.vercel.app/"/>
+    <meta property="og:site_name" content="NextAuth JWE Decoder"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:image" content="https://nextauth-jwe-decoder.vercel.app/og.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="NextAuth JWE Decoder — minimal green→cyan gradient on deep indigo with Space Grotesk title"/>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="NextAuth JWE Decoder"/>
+    <meta name="twitter:description" content="Decode NextAuth v4 JWE session tokens entirely in your browser. Private, offline-capable, and fast."/>
+    <meta name="twitter:image" content="https://nextauth-jwe-decoder.vercel.app/og.png"/>
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://nextauth-jwe-decoder.vercel.app/"/>
+    <link rel="alternate" hreflang="x-default" href="https://nextauth-jwe-decoder.vercel.app/"/>
+
+    <!-- WebApplication schema -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "NextAuth JWE Decoder",
-        "url": "https://nextauth-jwe-decoder.vercel.app/",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Any",
-        "isAccessibleForFree": true,
-        "description": "Decode NextAuth v4 JWE tokens entirely in your browser. No tracking. Offline-capable.",
-        "image": "https://nextauth-jwe-decoder.vercel.app/og.png"
-      }
+        {
+            "@context":"https://schema.org",
+            "@type":"WebApplication",
+            "name":"NextAuth JWE Decoder",
+            "url":"https://nextauth-jwe-decoder.vercel.app/",
+            "applicationCategory":"DeveloperApplication",
+            "operatingSystem":"Any",
+            "isAccessibleForFree":true,
+            "description":"Decode NextAuth v4 JWE tokens entirely in your browser. No tracking. Offline-capable.",
+            "image":"https://nextauth-jwe-decoder.vercel.app/og.png",
+            "mainEntityOfPage":"https://nextauth-jwe-decoder.vercel.app/"
+        }
     </script>
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="NextAuth JWE Decoder" />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- FAQ schema -->
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[
+                {"@type":"Question","name":"Is decoding done locally in my browser?","acceptedAnswer":{"@type":"Answer","text":"Yes. The decoder runs entirely client-side. Your tokens never leave your device."}},
+                {"@type":"Question","name":"Does this support NextAuth v4 JWE session tokens?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paste a JWE from a NextAuth v4 session and provide your encryption key to inspect its payload."}},
+                {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. Once loaded, it is offline-capable."}},
+                {"@type":"Question","name":"Is my data tracked?","acceptedAnswer":{"@type":"Answer","text":"No analytics or tracking are required to use the tool."}}
+            ]
+        }
+    </script>
+
+    <!-- Icons & PWA -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="NextAuth JWE Decoder"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+</head>
+
+<body>
+<noscript>
+    <main>
+        <h1>NextAuth JWE Decoder</h1>
+        <p>Decode NextAuth v4 JWE session tokens entirely in your browser. Private, offline-capable, and fast.</p>
+        <p><strong>No JavaScript, no decoding</strong>: enable JavaScript to use the tool.</p>
+    </main>
+</noscript>
+
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
